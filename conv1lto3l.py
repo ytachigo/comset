@@ -1,7 +1,7 @@
 import re
 
 def convert_1lto3l():
-    get_file = input('Filename: ')
+    filename = input('Filename: ')
     amino_dict = { 
         'A': ' ALA ', 'B': ' ASX ', 'C': ' CYS ',
         'D': ' ASP ', 'E': ' GLU ', 'F': ' PHE ',
@@ -13,7 +13,7 @@ def convert_1lto3l():
         'X': ' XAA ', 'Y': ' TYR ', 'Z': ' GLX '
          }
 
-    for line in open(get_file, 'r'):
+    for line in open(filename, 'r'):
         output = 'convertedto3l.dat'
         open_file = open(output, 'a')
 
