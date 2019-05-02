@@ -6,13 +6,13 @@ def get_remdtemp():
     maxtmp = int(input('Maximum temperature (K): '))
     const = np.log(maxtmp / mintmp) / (n - 1)
     filename = 'temperatures.dat'
-    f = open(filename, 'a')
+    open_file = open(filename, 'a')
 
     for i in range(0, n):
         temp = mintmp * np.exp(const * i)
-        f.write(str(temp))
-        f.write('\n')
-    f.close()
+        open_file.write(str(temp))
+        open_file.write('\n')
+    open_file.close()
 
 ##### Main Routine #####
 get_remdtemp()

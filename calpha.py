@@ -6,7 +6,7 @@ trajin main.mdcrd 1 last 10"""]
 
 for i in range(nf, nl + 1):
 	filename = 'calpha%d.sh' %i
-	f = open(filename, 'w')
+	open_file = open(filename, 'w')
 	str = """cpptraj <<EOF
 %s\n""" % traj[0]
 
@@ -15,5 +15,5 @@ for i in range(nf, nl + 1):
 		    str += """distance :%d@CA :%d@CA out calpha%d.dat\n""" %(i, j, i)
 
 	str += """EOF"""
-	f.write(str)
-	f.close()
+	open_file.write(str)
+	open_file.close()
